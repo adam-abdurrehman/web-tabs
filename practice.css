@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000007;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 90vw;
+    height: 90vh;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    overflow: auto; /* Prevents overflow in main */
+    gap: 20px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    background-color: #000000; /* Optional: for visualization */
+    border-right: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.country-names{
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-start;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.country-names.active {
+    background-color: #373737;
+    color: white;
+}
+
+.country-names:hover {
+    background-color: #373737;
+    cursor: pointer;
+    box-shadow: 0 0 10 rgb(158, 158, 158);
+}
+
+.country-names:hover .name,
+.country-names:hover .details {
+    color: white;
+    transition: .33s ease;
+
+}
+
+.country-names .name,.details{
+    font-size: 1.15rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color:rgb(154, 154, 154);
+
+}
+
+.country-names .details{
+    font-size: 1rem;
+    font-weight: 300;
+    
+}
+
+.scroll {
+    height: 530%; /* Make the scroll area match the height of the main tag */
+    width: 75%;
+    /*overflow-y: auto; /* Allows vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scroll-pics {
+    height: 100%; /* Set the height to match the height of the scroll container */
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    border-radius: 5px;
+}
